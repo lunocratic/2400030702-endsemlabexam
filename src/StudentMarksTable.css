@@ -1,0 +1,171 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.reset-btn {
+  padding: 8px 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  align-self: flex-end;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #ee5a5a;
+}
+
+.results-info {
+  text-align: right;
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.marks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.marks-table thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.marks-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.marks-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.marks-table th.sortable:hover {
+  background-color: #45a049;
+}
+
+.marks-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.marks-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.marks-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.marks-table td {
+  padding: 12px 15px;
+  color: #333;
+}
+
+.score {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.score.excellent {
+  color: #4CAF50;
+}
+
+.score.good {
+  color: #2196F3;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px !important;
+  color: #999;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    min-width: 100%;
+  }
+
+  .reset-btn {
+    align-self: stretch;
+  }
+
+  .marks-table {
+    font-size: 14px;
+  }
+
+  .marks-table th,
+  .marks-table td {
+    padding: 10px;
+  }
+}
